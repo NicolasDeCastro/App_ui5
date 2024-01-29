@@ -43,8 +43,26 @@
 
                     <Input
                         width="100%"
-                        id="input2"
+                        id="input1"
                         value=" {/localidade}-{/uf}"
+                    />
+                     <Label
+                        text="complemento"
+                        id="label2"
+                    />
+                     <Input
+                        width="100%"
+                        id="input2"
+                        value="{/complemento}"
+                    />
+                    <Label
+                        text="uf"
+                        id="label3"
+                    />
+                     <Input
+                        width="100%"
+                        id="input3"
+                        value="{/uf}"
                     />
                 </form:content>
             </form:SimpleForm>
