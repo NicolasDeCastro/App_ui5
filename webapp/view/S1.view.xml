@@ -1,0 +1,55 @@
+<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="project1.controller.S1"
+    displayBlock="true"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <!-- <SearchField value="{ segundo>/termo }" placeholder="digite um CEP" id="seachField" search="onSearch" /> -->
+             <SearchField value="{ path: '/termo',model:'segundo' }" placeholder="digite um CEP" id="seachField" search="onSearch" /> 
+            <form:SimpleForm
+                editable="true"
+                layout="ResponsiveGridLayout"
+                xmlns:sap.ui.core="sap.ui.core"
+                id="form1"
+                
+            >
+                <form:content>
+                    <sap.ui.core:Title
+                        text="Title"
+                        id="title0"
+                    />
+
+                    <Label
+                        text="logradouro"
+                        id="label0"
+                    />
+
+                    <Input
+                        width="100%"
+                        id="input0"
+                        value="{/logradouro}"
+                    />
+
+                    <Label
+                        text="cidade/estado"
+                        id="label1"
+                    />
+
+                    <Input
+                        width="100%"
+                        id="input2"
+                        value=" {/localidade}-{/uf}"
+                    />
+                </form:content>
+            </form:SimpleForm>
+
+           
+        </content>
+    </Page>
+</mvc:View>
